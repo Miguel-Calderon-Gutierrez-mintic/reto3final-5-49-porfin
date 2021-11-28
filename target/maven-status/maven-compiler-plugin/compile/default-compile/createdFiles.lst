@@ -11,6 +11,7 @@ com\usa\reto3completoMiguel\repository\crud\MessageRepository.class
 com\usa\reto3completoMiguel\servicios\ReservationService.class
 com\usa\reto3completoMiguel\modelentidades\Category.class
 com\usa\reto3completoMiguel\webcontroladores\libRestController.class
+com\usa\reto3completoMiguel\servicios\CategoryService.class
 com\usa\reto3completoMiguel\webcontroladores\ClientRestController.class
 com\usa\reto3completoMiguel\repository\crud\ClientRepository.class
 com\usa\reto3completoMiguel\webcontroladores\MessageRestController.class
@@ -18,3 +19,4 @@ com\usa\reto3completoMiguel\modelentidades\Client.class
 com\usa\reto3completoMiguel\modelentidades\Lib.class
 com\usa\reto3completoMiguel\webcontroladores\ReserrvationRestController.class
 com\usa\reto3completoMiguel\repository\crud\CategoryRepository.class
+com\usa\reto3completoMiguel\interfaz\CategoryInterfaz.class
