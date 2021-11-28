@@ -26,7 +26,7 @@ public class CategoryService {
         if (category.getId() == null) {
             return CategoryRepo.save(category);
         } else {
-            Optional<Category> Categoryaux = CategoryRepo.findById(category.getId());
+            Optional<Category> Categoryaux = CategoryRepo.getById(category.getId());
             if (Categoryaux.isEmpty()) {
                 return CategoryRepo.save(category);
             } else {
@@ -36,12 +36,12 @@ public class CategoryService {
     }
 
     public List<Category> buscarTodo() {
-        return (List<Category>) CategoryRepo.findAll();
+        return (List<Category>) CategoryRepo.getAll();
     }
 
     public Category update(Category c) {
         if (c.getId() != null) {
-            Optional<Category> g = CategoryRepo.findById(c.getId());
+            Optional<Category> g = CategoryRepo.getById(c.getId());
             if (!g.isEmpty()) {
                 System.out.println("saludo desde actualizar");
                 if (c.getName() != null) {
@@ -62,9 +62,9 @@ public class CategoryService {
     }
 
     public boolean delete(Integer c) {
-        Optional<Category> g = CategoryRepo.findById(c);
+        Optional<Category> g = CategoryRepo.getById(c);
         if (!g.isEmpty()) {
-            CategoryRepo.deleteById(g.get().getId());
+            CategoryRepo.delete(g.get());
             return true;
         }
         return false;
